@@ -1,0 +1,33 @@
+:root {
+  --vp-c-brand-1: #10a37f;
+  --vp-c-brand-2: #0e8e6e;
+  --vp-c-brand-3: #0c7a5f;
+  
+  --vp-c-bg: #ffffff;
+  --vp-c-bg-alt: #f8f9fa;
+  --vp-c-bg-soft: #f1f3f4;
+  
+  --vp-font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --vp-font-family-mono: 'JetBrains Mono', 'Fira Code', Menlo, Monaco, Consolas, monospace;
+}
+
+.dark {
+  --vp-c-bg: #1a1a2e;
+  --vp-c-bg-alt: #16213e;
+  --vp-c-bg-soft: #0f3460;
+}
+
+.VPNavBarTitle .title {
+  font-weight: 700;
+}
+
+.VPHome .name {
+  background: linear-gradient(120deg, #10a37f, #1eaedb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.vp-doc h1 {
+  border-bottom: 2px solid var(--vp-c-brand-1);
+  padding-bottom: 0.5em;
+}
