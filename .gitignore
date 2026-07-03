@@ -1,5 +1,4 @@
 node_modules
-.viteress/dist
 docs/.vitepress/dist
 .DS_Store
 *.log

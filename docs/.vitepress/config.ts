@@ -4,6 +4,7 @@ export default defineConfig({
   title: 'Codex 使用指南',
   description: 'Codex CLI 助手的指令、最佳实践及已安装扩展的使用方法',
   lang: 'zh-CN',
+  base: '/codex-howto/',
 
   ignoreDeadLinks: true,
   cleanUrls: true,
