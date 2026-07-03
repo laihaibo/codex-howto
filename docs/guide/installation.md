@@ -88,15 +88,12 @@ export OPENAI_API_KEY="your-api-key-here"
 Codex 使用以下位置的配置文件：
 
 ```
-~/.codex/config.json        # 主配置文件
-~/.codex/credentials.json   # 凭据文件
+~/.codex/config.toml        # 主配置文件（TOML 格式）
+~/.codex/auth.json          # 认证凭据
+~/.codex/model-catalogs/    # 模型目录
 ```
 
-初始化配置文件：
-
-```bash
-codex init
-```
+> **说明**：Codex 不会自动创建配置文件。你可以通过 `codex config edit` 打开编辑器手动创建，或运行一次 `codex login` 自动生成。
 
 ## 卸载
 
@@ -119,6 +116,27 @@ A: 运行以下命令：
 
 ```bash
 npm update -g @openai/codex
+```
+
+## 登录认证
+
+首次使用 Codex 需要完成登录认证。认证有两种方式：
+
+### 方式一：OpenAI SSO 登录
+
+```bash
+codex login
+```
+
+此命令会打开浏览器完成 OAuth 认证流程。登录凭证会保存在 `~/.codex/auth.json` 中。
+
+### 方式二：API 密钥认证
+
+对于非 OpenAI 模型提供商（如第三方 API），在 `config.toml` 中配置环境变量即可：
+
+```toml
+[mcp_servers.my_provider.env]
+MY_API_KEY = "your-key"
 ```
 
 ## 下一步

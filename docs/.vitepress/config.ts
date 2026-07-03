@@ -22,34 +22,54 @@ export default defineConfig({
       { text: '技能', link: '/skills/' },
       { text: '插件', link: '/plugins/' },
       { text: 'MCP 服务', link: '/mcp/' },
-      { text: '最佳实践', link: '/best-practices/' }
+      { text: '最佳实践', link: '/best-practices/' },
+      { text: '术语表', link: '/glossary' }
     ],
 
     sidebar: {
       '/guide/': [
         {
           text: '入门指南',
+          collapsed: false,
           items: [
             { text: '什么是 Codex', link: '/guide/' },
-            { text: '安装与配置', link: '/guide/installation' },
-            { text: '基本使用', link: '/guide/basic-usage' },
-            { text: '配置文件详解', link: '/guide/configuration' },
-            { text: '常用命令', link: '/guide/commands' }
+            { text: '安装与设置', link: '/guide/installation' },
+            { text: '基本使用', link: '/guide/basic-usage' }
+          ]
+        },
+        {
+          text: '核心概念',
+          collapsed: false,
+          items: [
+            { text: '工作模式', link: '/guide/work-modes' },
+            { text: '配置详解', link: '/guide/configuration' },
+            { text: '常用命令', link: '/guide/commands' },
+            { text: 'AGENTS.md 项目配置', link: '/guide/agents-md-guide' }
           ]
         },
         {
           text: '进阶使用',
+          collapsed: true,
           items: [
             { text: '技能系统', link: '/guide/skills-system' },
             { text: '插件系统', link: '/guide/plugins-system' },
-            { text: 'MCP 服务', link: '/guide/mcp-system' },
-            { text: '工作模式', link: '/guide/work-modes' }
+            { text: 'MCP 服务', link: '/guide/mcp-system' }
+          ]
+        },
+        {
+          text: '实际场景',
+          collapsed: false,
+          items: [
+            { text: '多代理协作', link: '/best-practices/multi-agent' },
+            { text: 'CI/CD 集成', link: '/guide/cicd-integration' },
+            { text: '故障排除', link: '/guide/troubleshooting' }
           ]
         }
       ],
       '/skills/': [
         {
           text: '系统内置技能',
+          collapsed: false,
           items: [
             { text: '技能概览', link: '/skills/' },
             { text: 'imagegen - 图像生成', link: '/skills/imagegen' },
@@ -61,6 +81,7 @@ export default defineConfig({
         },
         {
           text: 'Build Web Apps 插件技能',
+          collapsed: true,
           items: [
             { text: 'frontend-app-builder', link: '/skills/frontend-app-builder' },
             { text: 'frontend-testing-debugging', link: '/skills/frontend-testing' },
@@ -72,12 +93,14 @@ export default defineConfig({
         },
         {
           text: '数据可视化技能',
+          collapsed: true,
           items: [
             { text: 'data-visualization', link: '/skills/data-visualization' }
           ]
         },
         {
           text: 'Codex Security 安全技能',
+          collapsed: true,
           items: [
             { text: '安全扫描概览', link: '/skills/security-overview' },
             { text: 'security-scan', link: '/skills/security-scan' },
@@ -94,6 +117,7 @@ export default defineConfig({
         },
         {
           text: 'GitHub 技能',
+          collapsed: true,
           items: [
             { text: 'github 使用指南', link: '/skills/github' },
             { text: 'gh-fix-ci', link: '/skills/gh-fix-ci' },
@@ -103,6 +127,7 @@ export default defineConfig({
         },
         {
           text: 'Superpowers 技能',
+          collapsed: true,
           items: [
             { text: 'using-superpowers', link: '/skills/using-superpowers' },
             { text: 'brainstorming', link: '/skills/brainstorming' },
@@ -122,6 +147,7 @@ export default defineConfig({
         },
         {
           text: 'HyperFrames 技能',
+          collapsed: true,
           items: [
             { text: 'hyperframes 概览', link: '/skills/hyperframes' },
             { text: 'hyperframes-cli', link: '/skills/hyperframes-cli' },
@@ -132,6 +158,7 @@ export default defineConfig({
         },
         {
           text: '其他技能',
+          collapsed: true,
           items: [
             { text: 'canvas-design', link: '/skills/canvas-design' },
             { text: 'code-reviewer', link: '/skills/code-reviewer' },
@@ -155,6 +182,7 @@ export default defineConfig({
       '/plugins/': [
         {
           text: '插件系统',
+          collapsed: false,
           items: [
             { text: '插件概览', link: '/plugins/' },
             { text: 'build-web-apps', link: '/plugins/build-web-apps' },
@@ -173,6 +201,7 @@ export default defineConfig({
       '/mcp/': [
         {
           text: 'MCP 服务',
+          collapsed: false,
           items: [
             { text: 'MCP 概览', link: '/mcp/' },
             { text: 'MiniMax', link: '/mcp/minimax' },
@@ -188,15 +217,23 @@ export default defineConfig({
       ],
       '/best-practices/': [
         {
-          text: '最佳实践',
+          text: '核心技巧',
+          collapsed: false,
           items: [
             { text: '概览', link: '/best-practices/' },
             { text: '提示词技巧', link: '/best-practices/prompting' },
             { text: '任务规划', link: '/best-practices/planning' },
-            { text: '代码开发', link: '/best-practices/coding' },
+            { text: '代码开发', link: '/best-practices/coding' }
+          ]
+        },
+        {
+          text: '流程与安全',
+          collapsed: false,
+          items: [
             { text: '安全实践', link: '/best-practices/security' },
             { text: '调试技巧', link: '/best-practices/debugging' },
-            { text: '协作工作流', link: '/best-practices/collaboration' }
+            { text: '协作工作流', link: '/best-practices/collaboration' },
+            { text: '多代理协作', link: '/best-practices/multi-agent' }
           ]
         }
       ]

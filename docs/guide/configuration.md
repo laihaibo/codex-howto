@@ -234,15 +234,6 @@ enabled = true
 enabled = true
 ```
 
-## TUI 配置
-
-```toml
-[tui.model_availability_nux]
-"gpt-5.5" = 4
-```
-
-用于控制模型可用性提示的显示次数。
-
 ## 环境变量
 
 Codex 支持通过环境变量进行配置，适用于 CI/CD 场景或临时覆盖。

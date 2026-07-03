@@ -178,17 +178,25 @@ trust_level = "untrusted"
 
 ### 自动审批规则
 
-可以通过配置设置自动审批规则：
+可以为不同来源的操作设置自动审批：
+
+#### MCP 工具自动审批
 
 ```toml
-# 自动批准特定 MCP 工具
 [mcp_servers.filesystem.tools.read_text_file]
 approval_mode = "approve"
-
-# 自动批准特定命令前缀
-[permissions]
-auto_approve_commands = ["git status", "git diff", "npm test"]
 ```
+
+#### 项目信任级别自动审批
+
+项目标记为 `trusted` 后，文件写入和命令执行自动批准：
+
+```toml
+[projects."/home/haha/codes/my-app"]
+trust_level = "trusted"
+```
+
+> **注意**：信任级别和工具审批是信任控制的两个层次。信任级别控制 Codex 自身行为（文件/命令），MCP 工具审批控制外部工具访问。
 
 ## 模式对比
 

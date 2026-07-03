@@ -177,6 +177,6 @@ codex --version
 
 ## 下一步
 
+- [工作模式](/guide/work-modes) - 了解不同模式的特点
 - [配置文件详解](/guide/configuration) - 掌握高级配置
 - [常用命令](/guide/commands) - 命令完整参考
-- [工作模式](/guide/work-modes) - 了解不同模式的特点
